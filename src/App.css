@@ -1,0 +1,67 @@
+/* General Settings */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #fff !important;
+  color: #fafaf6 !important;
+  font-family: 'Ubuntu Mono', monospace !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+    height: 100vh;
+    background-color: #222831 !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+::-moz-selection {
+    background: #29a19c !important;
+    color: #fafaf6 !important;
+}
+
+::selection {
+    background: #29a19c !important;
+    color: #fafaf6 !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+input:focus, button:focus, select:focus{
+    outline: none;
+}
+
+input, button, select {
+    cursor: pointer;
+}
+
+.loading {
+    position: relative;
+    left: 45%;
+    top: 40%;
+    width: 10%;
+}
+
+@media (max-width: 992px)  {
+    html {
+        background-color: #222831;
+    }
+
+    .loading {
+        position: absolute;
+        left: 30%;
+        top: 30%;
+        width: 10%;
+    }
+}

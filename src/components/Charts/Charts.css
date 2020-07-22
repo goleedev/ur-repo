@@ -1,0 +1,24 @@
+/* Chart Page */
+.charts-center {
+    display: flex;
+    margin-bottom: 15%;
+}
+
+.fusioncharts-container {
+    width: 100vw !important;
+    padding-left: 17% !important;
+}
+
+@media (max-width: 992px) { 
+    .charts-center {
+        display: inline-block;
+        margin: 0 !important;
+    }
+    .fusioncharts-container {
+        padding-left: 0 !important;
+    }
+
+    .charts-container {
+        margin: 0 !important;
+    }
+}

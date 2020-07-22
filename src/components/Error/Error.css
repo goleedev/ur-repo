@@ -1,0 +1,52 @@
+/* Error Page */
+.error {
+    text-align: center;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    padding-top: 0%;
+}
+
+.error__msg {
+    margin-left: 0;
+}
+
+.error__msg h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #29a19c;
+    color: #222831;
+}
+
+.error__msg p {
+    font-size: 2rem;
+    padding-top: 20px;
+}
+
+.error__back {
+    position: absolute;
+    top: 10%;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 992px)  { 
+    .error__back {
+        position: absolute;
+        top: 3%;
+        text-align: left;
+        font-size: 1.25rem;
+    }
+
+    .error__msg h1 {
+        font-size: 4rem;
+        color: #fff;
+        background-color: #222831;
+    }
+
+    .error__msg p {
+        font-size: 1.5rem;
+        color: #29a19c;
+    }
+}
