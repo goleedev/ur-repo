@@ -1,19 +1,16 @@
 import React from 'react';
 import { GithubContext } from '../Context/Context';
-
-import { connect } from "react-redux";
-import Error from '../Error/Error';
-import Repos from '../Charts/Repos';
-import loadingGif from '../../loading.gif';
-
 import { MdWork, MdLocationOn } from 'react-icons/md';
 import { FaBlog, FaRegCalendarCheck } from 'react-icons/fa';
 import { RiArrowGoBackLine, RiTwitterLine } from 'react-icons/ri';
 import { Container, Row, Col } from 'reactstrap';
+import Repos from '../Charts/Repos';
+import Error from '../Error/Error';
+import loadingGif from '../../loading.gif';
 import './UserDetail.css';
 
 const UserDetail = () => {
-    const { githubUser, error, isLoading, requests } = React.useContext(GithubContext);
+    const { githubUser, isLoading } = React.useContext(GithubContext);
     const {
         avatar_url,
         html_url,
@@ -35,11 +32,14 @@ const UserDetail = () => {
     const months = [ "January", "February", "March", "April", "May", "June", 
     "July", "August", "September", "October", "November", "December" ];
     const month = months[Number(userJoined[1]) - 1];
-    
+
     return (
         <Container className="user__container"> 
-            {!isLoading
-            ? (<div>
+            {isLoading
+                ? <img className="loading" src={loadingGif} alt="loading" />
+                : (login === "not.loading.yet!")
+                    ? <Error />
+                    : (<div>
                 <a className="user__back" href="/">
                     <RiArrowGoBackLine /> Back To Home
                 </a>
@@ -103,8 +103,8 @@ const UserDetail = () => {
                     <Repos />
                 </Row>
             </div>
-            )
-            : <img src={loadingGif} />}
+                )
+            }
         </Container>
     )
 }
