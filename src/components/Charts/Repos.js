@@ -1,6 +1,5 @@
 import React from 'react';
 import { GithubContext } from '../Context/Context';
-import { Row } from 'reactstrap';
 import Doughnut from './Doughnut';
 import Pie from './Pie'
 import './Charts.css'
@@ -39,12 +38,10 @@ const Repos = () => {
     .slice(0, 5);
 
   return (
-    <Row className="charts-container">
-      <div className="charts-center">
+    <div className="charts-center">
         <Doughnut data={mostUsed} />
-        <Pie data={mostPopular} />
-      </div>
-    </Row>
+        {mostPopular && <Pie data={mostPopular} />}
+    </div>
   );
 };
 

@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { InputGroup, InputGroupAddon, InputGroupText, Input, Button, Label } from 'reactstrap';
 import { Link, useHistory } from 'react-router-dom';
 import { GithubContext } from '../Context/Context';
-
 import { FaGithub } from 'react-icons/fa';
+import Error from '../Error/Error';
 import './Join.css';
 
 const Join = () => {
     let history = useHistory();
     const [userName, setUserName] = useState('');
-    const { searchGithubUser } = React.useContext(
+    const { searchGithubUser, error, isLoading, requests } = React.useContext(
         GithubContext
     );
 
@@ -31,7 +31,7 @@ const Join = () => {
         }
         searchGithubUser(userName);
     }
-
+    
     return (
         <div className="join__container">
             <FaGithub className="join__icon" />
@@ -43,7 +43,9 @@ const Join = () => {
                 <Input onKeyPress={onKeySearch} onChange={onUserName} className="join__input" placeholder="username" autoComplete="off" />
                 <Link to={`/github?name=${userName}`}>
                     <InputGroupAddon addonType="append">
-                        <Button onClick={onSearch} size="lg" className="join__search">Search</Button>
+                        {requests > 0 && !isLoading && (
+                            <Button onClick={onSearch} size="lg" className="join__search">Search</Button>
+                        )}
                     </InputGroupAddon>
                 </Link>
             </InputGroup>

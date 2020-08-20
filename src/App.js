@@ -12,7 +12,7 @@ function App() {
     <AuthWrapper>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Join} />
+          <Route exact path="/" component={Join} />   
           <Route exact path="/github" component={UserDetail} />
           <Route path='*'>
                 <Error />
