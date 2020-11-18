@@ -27,7 +27,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/goleedev/">
+  <a href="https://github.com/goleedev/ur-repo">
     <img src="./src/images/github-logo.png" alt="Logo" width="100">
   </a>
 
