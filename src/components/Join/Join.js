@@ -3,7 +3,6 @@ import { InputGroup, InputGroupAddon, InputGroupText, Input, Button, Label } fro
 import { Link, useHistory } from 'react-router-dom';
 import { GithubContext } from '../Context/Context';
 import { FaGithub } from 'react-icons/fa';
-import Error from '../Error/Error';
 import './Join.css';
 
 const Join = () => {
