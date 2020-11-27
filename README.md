@@ -128,8 +128,8 @@ GO Lee - [@golee.dev](https://www.instagram.com/golee.dev/) - golee.dev@gmail.co
 Project Link: [https://github.com/goleedev/ur-repo](https://github.com/goleedev/ur-repo)
 
 
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
+<!-- See Also -->
+## See Also
 
 * [auth0-react](https://github.com/auth0/auth0-react#readme)
 * [axios](https://github.com/axios/axios)
